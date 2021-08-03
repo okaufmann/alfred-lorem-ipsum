@@ -1,9 +1,9 @@
 <?php
 
-use joshtronic\LoremIpsum;
 use Alfred\Workflows\Workflow;
+use joshtronic\LoremIpsum;
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 $lipsum = new LoremIpsum;
 $workflow = new Workflow;
@@ -29,10 +29,8 @@ if (! ctype_digit((string) $count)) {
     exit;
 }
 
-$lipsum->word(1);
-
 $arg = ucfirst($lipsum->{$type}($count));
-
+ray($arg);
 $noun = $count > 1 ? $type : substr($type, 0, -1);
 
 $workflow->result()

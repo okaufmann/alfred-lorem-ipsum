@@ -54,6 +54,7 @@ jobs:
         run: |
           echo building new version ${{ steps.get_version.outputs.VERSION }}
           sh build.sh ${{ steps.get_version.outputs.VERSION }}
+          ls -la
 
       - name: Release
         uses: softprops/action-gh-release@v1

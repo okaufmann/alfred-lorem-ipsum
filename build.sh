@@ -12,6 +12,4 @@ echo "replacing version"
 sed "s/{VERSION}/$newVersion/g" info.plist.example > info.plist
 
 echo "create zip"
-zip -r "../$fileName" . -x "*.DS_Store" -x "*/\.DS_Store" -x "info.plist.example"
-
-open $fileName
+zip -r "../$fileName" . -x "*.DS_Store" -x "*/\.DS_Store" -x "info.plist.example" -x ".git"

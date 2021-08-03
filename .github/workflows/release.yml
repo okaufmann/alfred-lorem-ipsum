@@ -53,7 +53,7 @@ jobs:
       - name: Build package
         run: |
           echo building new version ${{ steps.get_version.outputs.VERSION }}
-          sh build.sh ${{ steps.get_version.outputs.VERSION }}
+          sh build.sh
           ls -la
 
       - name: Release

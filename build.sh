@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-newVersion=$1
+newVersion=${1:-0.0.0}
 
 fileName="alfred-lorem-ipsum.alfred3workflow"
 

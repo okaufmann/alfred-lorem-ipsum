@@ -50,5 +50,9 @@ jobs:
         run: |
           composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
 
+      - name: Build package
+        run: |
+          sh build.sh
+
       # - name: Release
       #   uses: softprops/action-gh-release@v1

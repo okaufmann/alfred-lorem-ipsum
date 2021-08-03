@@ -55,5 +55,7 @@ jobs:
           echo building new version ${{ steps.get_version.outputs.VERSION }}
           sh build.sh ${{ steps.get_version.outputs.VERSION }}
 
-      # - name: Release
-      #   uses: softprops/action-gh-release@v1
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: alfred-lorem-ipsum.alfred3workflow
